@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
+    list-style: none;
 }
 
 body {
@@ -53,4 +54,14 @@ button:active {
 
 .error span {
     margin-left: .5rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.country {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
