@@ -12,12 +12,12 @@ body {
     background: linear-gradient(to right, rgb(237, 237, 237), rgb(76, 0, 255));
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     outline: 2px solid blueviolet;
 }
 
 .container {
-    margin: 2rem 0;
+    width: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -56,29 +56,50 @@ button:active {
     margin-left: .5rem;
 }
 
-h2 {
-    margin-bottom: 2rem;
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.header {
+    margin: 2rem 0;
 }
 
 .country {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 2px solid orange;
-    width:  100%;
+    border-radius: 10px;
+    background: rgb(237, 237, 237);
+    padding: .5rem 1rem;
+    box-shadow: 5px 5px 9px rgb(82, 82, 82);
+    transition: all .2s ease-in;
 }
 
-.country div {
-    width: 90px;
-    height: 70px;
-    outline: 2px solid orange;
+.country:hover {
+    transform: scale(1.1);
+}
+.country ul {
+    width: 70%;
 }
 
 li {
-    border: 2px solid orange;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(182, 182, 182);
 }
 
-img {
+li:last-child {
+    border-bottom: none;
+}
+
+.country div {
+    width: 30%;
+    height: 40%;
+    margin-left: 1rem;
+}
+
+.flag {
     width: 100%;
     height: 100%;
 }
