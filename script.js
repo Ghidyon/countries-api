@@ -1,11 +1,12 @@
-document.querySelector('button').addEventListener("click", getCountries);
+const button = document.querySelector('button');
+button.addEventListener("click", getCountries);
+const loader = document.querySelector('.loader');
 
 function getCountries() {
     fetch('https://restcountries.eu/rest/v2/all')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            let header = `<h2>Countries</h2>`;
+            let header = `<h1>Countries</h1>`;
             let output = ``;
             data.forEach(country => {
                 const { name, capital, region, timezones, currencies, flag } = country;
@@ -30,4 +31,17 @@ function getCountries() {
                                 <span>Failed to fetch countries, please check your internet connection.</span>`;
             document.querySelector('.error').innerHTML = errorMessage;
         })
+}
+
+
+document.onreadystatechange = () => {
+    if (document.readyState !== "complete") {
+        loader.style.visibility = "visible";
+        button.disabled = true;
+        button.style.opacity = .2;
+    } else {
+        loader.style.visibility = "hidden";
+        button.style.opacity = 1;
+        button.disabled = false;
+    }
 }
