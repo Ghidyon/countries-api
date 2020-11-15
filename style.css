@@ -68,7 +68,7 @@ button:active {
 
 .country {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 10px;
     background: rgb(237, 237, 237);
@@ -176,6 +176,19 @@ li:last-child {
     .country {
         flex-direction: column-reverse;
         align-items: center;
-        justify-items: center;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .country div {
+        width: 50%;
+        margin: 0;
+    }
+        
+    .country ul {
+        width: 100%;
+    }
+
+    li:first-child {
+        text-align: center;
     }
 }
