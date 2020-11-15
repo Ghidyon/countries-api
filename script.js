@@ -1,8 +1,12 @@
 const button = document.querySelector('button');
-button.addEventListener("click", getCountries);
 const loader = document.querySelector('.loader');
+const err = document.querySelector('.error');
 
-function getCountries() {
+const getCountries = () => {
+    button.style.display = "none";
+    err.style.display = "none";
+    loader.style.visibility = "visible";
+
     fetch('https://restcountries.eu/rest/v2/all')
         .then(response => response.json())
         .then(data => {
@@ -23,16 +27,21 @@ function getCountries() {
                             </div>
                           </div>`;
             })
+            loader.style.visibility = "hidden";
             document.querySelector('.header').innerHTML = header;
             document.querySelector('.countries').innerHTML = output;
         })
         .catch(() => {
+            button.style.display = "block";
+            loader.style.visibility = "hidden";
             const errorMessage = `<img src="images/icon-error.svg">
                                 <span>Failed to fetch countries, please check your internet connection.</span>`;
-            document.querySelector('.error').innerHTML = errorMessage;
+            err.innerHTML = errorMessage;
+            err.style.display = "flex";
         })
 }
 
+button.addEventListener("click", getCountries);
 
 document.onreadystatechange = () => {
     if (document.readyState !== "complete") {
