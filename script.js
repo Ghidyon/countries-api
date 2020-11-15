@@ -13,11 +13,11 @@ function getCountries() {
                                 <li>${name}</li>
                                 <li>Capital: ${capital}</li>
                                 <li>Region: ${region}</li>
-                                <li>Time Zone(s): ${timezones}</li>
+                                <li>Time zone(s): ${timezones[0]}</li>
                                 <li>Currency: ${currencies[0].name}, ${currencies[0].symbol}</li>
                             </ul>
                             <div>
-                                <img src="${flag} title="${name}">
+                                <img src="${flag}" title="${name}">
                             </div>
                           </div>`;
             })

@@ -64,4 +64,21 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    outline: 2px solid orange;
+    width:  100%;
+}
+
+.country div {
+    width: 90px;
+    height: 70px;
+    outline: 2px solid orange;
+}
+
+li {
+    border: 2px solid orange;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
