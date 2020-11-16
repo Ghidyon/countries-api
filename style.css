@@ -71,7 +71,6 @@ button:active {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background: rgb(237, 237, 237);
     padding: .5rem 1rem;
     box-shadow: 4px 4px 8px #b1b1b1,
                 -4px -4px 8px rgb(255, 255, 255);
