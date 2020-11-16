@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(to right, rgb(237, 237, 237), rgb(76, 0, 255));
+    background: #ecf0f3;
 }
 
 .container {
@@ -26,18 +26,18 @@ button {
     border: 2px solid rgb(237, 237, 237);
     outline: none;
     background: rgb(237, 237, 237);
-    padding: .75rem 1.2rem;
-    border-radius: 10px;
+    padding: .75rem 1.5rem;
+    border-radius: 30px;
     font-weight: 500;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgb(82, 82, 82);
+    box-shadow: 2px 2px 6px #b1b1b1,
+                -2px -2px 6px rgb(255, 255, 255);
     transition: all .2s ease-in;
 }
 
 button:hover {
-    border: 2px solid rgb(76, 0, 255);
-    color: rgb(76, 0, 255);
+    border: 2px solid #000000;
 }
 
 button:active {
@@ -73,12 +73,13 @@ button:active {
     border-radius: 10px;
     background: rgb(237, 237, 237);
     padding: .5rem 1rem;
-    box-shadow: 5px 5px 9px rgb(82, 82, 82);
+    box-shadow: 4px 4px 8px #b1b1b1,
+                -4px -4px 8px rgb(255, 255, 255);
     transition: all .2s ease-in;
 }
 
 .country:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .country ul {
