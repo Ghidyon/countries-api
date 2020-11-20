@@ -22,6 +22,31 @@ body {
     align-items: center;
 }
 
+.input-group {
+    display: none;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+input {
+    width: 100%;
+    background: #ecf0f3;
+    padding: 1rem 1.2rem 1rem 3rem;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: inset 4px 4px 4px #cbced1,
+                inset -4px -4px 4px #ffffff;
+}
+
+.icon-search {
+    position: absolute;
+    top: 35%;
+    left: 9%;
+    transform: translate(-35%, -9%);
+}
+
 button {
     border: 2px solid rgb(237, 237, 237);
     outline: none;
