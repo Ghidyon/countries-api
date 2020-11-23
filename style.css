@@ -29,7 +29,7 @@ body {
 }
 
 input {
-    width: 100%;
+    width: 350px;
     background: #ecf0f3;
     padding: 1rem 1.2rem 1rem 3rem;
     font-size: 18px;
@@ -42,13 +42,13 @@ input {
 
 .icon-search {
     position: absolute;
-    top: 35%;
-    left: 9%;
-    transform: translate(-35%, -9%);
+    top: 34%;
+    left: 7%;
+    transform: translate(-34%, -7%);
 }
 
 button {
-    border: 2px solid rgb(237, 237, 237);
+    border: 1px solid rgb(237, 237, 237);
     outline: none;
     background: rgb(237, 237, 237);
     padding: .75rem 1.5rem;
@@ -62,7 +62,7 @@ button {
 }
 
 button:hover {
-    border: 2px solid #000000;
+    border: 1px solid #000000;
 }
 
 button:active {
@@ -130,7 +130,6 @@ li:last-child {
     height: 100%;
 }
 
-
 /* Loader */
 
 .loader {
@@ -194,6 +193,12 @@ li:last-child {
 }
 
 @media screen and (max-width: 368px) {
+    .icon-search {
+        top: 34%;
+        left: 9%;
+        transform: translate(-34%, -9%);
+    }
+
     .countries {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -209,8 +214,12 @@ li:last-child {
         margin: 0;
     }
         
-    .country ul {
+    .country ul, input {
         width: 100%;
+    }
+
+    input::placeholder {
+        font-size: 16px;        ;
     }
 
     li:first-child {
